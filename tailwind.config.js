@@ -11,6 +11,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {'3xl': '1614px'},
+      colors: {
+        'theme-green': '#9ED1A3',
+        'theme-back': '#FDF4F5',
+      }
     },
   },
   plugins: [],
