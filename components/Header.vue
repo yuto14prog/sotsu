@@ -1,7 +1,7 @@
 <template>
   <header class="flex flex-nowrap flex-row justify-between pt-6">
     <div>
-      <h1 v-text="$dayjs().format('MM/DD dddd')" class="text-3xl" />
+      <h1 v-text="$dayjs().format('MM/DD dddd')" class="text-4xl" />
     </div>
     <nav>
       <ul class="text-xl flex">
