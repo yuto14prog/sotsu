@@ -1,7 +1,11 @@
 <template>
   <div class="max-w-[1055px] pt-8">
     <h2 class="text-3xl text-center">Pick up</h2>
-    <Article :title=wip.title :published-at=wip.publishedAt :url-to-image=wip.urlToImage />
+    <div class="grid grid-cols-2 gap-2 mt-4">
+      <div v-for="article in articles">
+        <Article :title=article.title :published-at=article.publishedAt :url-to-image=article.urlToImage :to=article.url />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,6 +16,4 @@
     {query: {country: 'jp', apiKey: config.public.newskey}},
   )
   const articles = news.value.articles
-  const wip = articles[0]
-  console.log(wip);
 </script>
