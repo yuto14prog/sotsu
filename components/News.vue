@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[1055px] pt-8">
+  <div class="max-w-[1055px]">
     <h2 class="text-3xl text-center">Pick up</h2>
     <div class="grid grid-cols-2 gap-2 mt-4">
       <div v-for="article in articles">
