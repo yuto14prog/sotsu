@@ -15,5 +15,5 @@
     'https://newsapi.org/v2/top-headlines',
     {query: {country: 'jp', apiKey: config.public.newskey}},
   )
-  const articles = news.value.articles
+  const articles = await news.value.articles
 </script>
