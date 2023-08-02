@@ -16,6 +16,11 @@
       </div>
       <img :src="`https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`" class="w-[70px] object-none bg-theme-green">
     </div>
+    <div class="flex justify-between pt-3 pb-2">
+      <div v-for="n in 4">
+        <Daily :label=labels[n-1] :icon=daily[n-1].weather[0].icon :temp=daily[n-1].temp.max />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,6 +35,7 @@
   )
   const current = await weather.value.current
   const daily = await weather.value.daily
+  const labels = ['明日','明後日','3日後','４日後']
   console.log(daily[0].temp.max);
 </script>
 
