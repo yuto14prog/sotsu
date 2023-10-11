@@ -1,7 +1,7 @@
 <template>
   <div class="w-[520px] border-2 rounded-xl bg-white py-2 px-4">
     <h2 class="text-3xl underline decoration-theme-green">Osaka</h2>
-    <div class="flex justify-between pt-2">
+    <div class="flex justify-between py-2">
       <div>
         <p class="text-gray-500">気温</p>
         <p><span class="text-4xl">{{Math.floor(parseInt(current.temp) - 273.16)}}</span>℃</p>
@@ -16,7 +16,7 @@
       </div>
       <img :src="`https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`" class="w-[70px] object-none bg-theme-green">
     </div>
-    <div class="flex justify-between pt-3 pb-2">
+    <div class="flex justify-between pt-2 pb-2 border-t-2">
       <div v-for="n in 4">
         <Daily :label=labels[n-1] :icon=daily[n-1].weather[0].icon :temp=daily[n-1].temp.max />
       </div>
@@ -36,6 +36,5 @@
   const current = await weather.value.current
   const daily = await weather.value.daily
   const labels = ['明日','明後日','3日後','４日後']
-  console.log(daily[0].temp.max);
 </script>
 
